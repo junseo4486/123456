@@ -4,205 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="전국 학교의 장애인 편의시설 현황을 확인하고, 모든 학생이 안전하고 편리하게 이용할 수 있는 학교를 만듭니다.">
-    <title>학교 접근성 - 장애인 편의시설 현황</title>
+    <title>학교 접근성 정보 - 장애인 편의시설 현황</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
-                </svg>
-                <span>학교 접근성</span>
-            </div>
-            <div class="nav-links">
-                <a href="#home" class="nav-link active" data-page="home">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                        <polyline points="9 22 9 12 15 12 15 22"/>
-                    </svg>
-                    홈
-                </a>
-                <a href="#schools" class="nav-link" data-page="schools">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                        <circle cx="12" cy="10" r="3"/>
-                    </svg>
-                    학교 검색
-                </a>
-                <a href="#report" class="nav-link" data-page="report">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <polyline points="14 2 14 8 20 8"/>
-                        <line x1="16" y1="13" x2="8" y2="13"/>
-                        <line x1="16" y1="17" x2="8" y2="17"/>
-                        <polyline points="10 9 9 9 8 9"/>
-                    </svg>
-                    제보 현황
-                </a>
-            </div>
-            <button class="report-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"/>
-                    <line x1="12" y1="16" x2="12" y2="12"/>
-                    <line x1="12" y1="8" x2="12.01" y2="8"/>
-                </svg>
-                제보하기
-            </button>
+    <header class="header">
+        <div class="container">
+            <h1>학교 접근성 정보</h1>
+            <nav>
+                <a href="#home" class="active">홈</a>
+                <a href="#schools">학교 검색</a>
+                <a href="#report">제보하기</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Home Section -->
-        <section id="home-section" class="page-section active">
-            <div class="hero-section">
-                <h1 class="hero-title">우리 학교 편의시설을<br>확인하세요</h1>
-                <p class="hero-subtitle">경기도 학교의 장애인 편의시설 현황을 한눈에 보고,<br>개선이 필요한 부분을 함께 제보해주세요.</p>
-                <div class="search-container">
-                    <input type="text" id="hero-search" class="search-input" placeholder="학교를 입력하세요...">
-                    <button class="search-button" onclick="searchFromHero()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"/>
-                            <path d="m21 21-4.3-4.3"/>
-                        </svg>
-                        검색
-                    </button>
-                </div>
-            </div>
-
-            <div class="features-section">
-                <h2 class="section-title">주요 기능</h2>
-                <p class="section-subtitle">AI 기술로 학교 접근성 정보를 쉽고 정확하게 제공합니다</p>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"/>
-                                <path d="m21 21-4.3-4.3"/>
-                            </svg>
-                        </div>
-                        <h3 class="feature-title">학교 검색</h3>
-                        <p class="feature-description">경기도 내 모든 학교의 편의시설 정보를 검색하고 확인할 수 있습니다</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14 2 14 8 20 8"/>
-                            </svg>
-                        </div>
-                        <h3 class="feature-title">상세 현황</h3>
-                        <p class="feature-description">각 학교별 장애인 편의시설 설치 현황을 상세하게 제공합니다</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                            </svg>
-                        </div>
-                        <h3 class="feature-title">개선 제보</h3>
-                        <p class="feature-description">편의시설 개선이 필요한 부분을 제보하고 함께 만들어갑니다</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Schools Section -->
-        <section id="schools-section" class="page-section">
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <div class="hero">
             <div class="container">
-                <div class="page-header">
-                    <h1 class="page-title">학교 검색</h1>
-                    <p class="page-description">학교명으로 검색하여 편의시설 현황을 확인하세요</p>
+                <h2>모든 학생을 위한 접근 가능한 학교</h2>
+                <p>전국 학교의 장애인 편의시설 현황을 확인하고, 더 나은 교육 환경을 만들어갑니다.</p>
+                <button class="btn-primary" onclick="showSection('schools')">학교 찾기</button>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 id="totalSchools">-</h3>
+                    <p>등록된 학교</p>
                 </div>
-
-                <div class="search-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon">
-                        <circle cx="11" cy="11" r="8"/>
-                        <path d="m21 21-4.3-4.3"/>
-                    </svg>
-                    <input type="text" id="school-search" class="search-input-main" placeholder="학교명으로 검색...">
+                <div class="stat-card">
+                    <h3 id="avgScore">-</h3>
+                    <p>평균 접근성 점수</p>
                 </div>
-
-                <div id="schools-grid" class="schools-grid">
-                    <!-- Schools will be loaded here -->
-                </div>
-
-                <div id="loading" class="loading" style="display: none;">
-                    <div class="spinner"></div>
-                    <p>학교 정보를 불러오는 중...</p>
-                </div>
-
-                <div id="no-results" class="no-results" style="display: none;">
-                    <p>검색 결과가 없습니다</p>
+                <div class="stat-card">
+                    <h3 id="highAccessibility">-</h3>
+                    <p>우수 학교 (70점 이상)</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Report Section -->
-        <section id="report-section" class="page-section">
-            <div class="container">
-                <div class="page-header">
-                    <h1 class="page-title">제보 현황</h1>
-                    <p class="page-description">접수된 제보 현황을 확인할 수 있습니다</p>
-                </div>
-
-                <div class="report-list">
-                    <p class="coming-soon">제보 기능은 곧 제공될 예정입니다</p>
-                </div>
+    <!-- Schools Section -->
+    <section id="schools" class="section">
+        <div class="container">
+            <h2>학교 검색</h2>
+            
+            <div class="search-box">
+                <input type="text" id="searchSchool" placeholder="학교명으로 검색">
+                <input type="text" id="searchCity" placeholder="시군명으로 검색">
+                <button class="btn-primary" onclick="searchSchools()">검색</button>
             </div>
-        </section>
-    </main>
+
+            <div id="schoolList" class="school-grid">
+                <p class="loading">학교 데이터를 불러오는 중...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Report Section -->
+    <section id="report" class="section">
+        <div class="container">
+            <h2>시설 개선 제보</h2>
+            <div class="form-container">
+                <form id="reportForm">
+                    <div class="form-group">
+                        <label for="reportSchool">학교명</label>
+                        <input type="text" id="reportSchool" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reportLocation">위치</label>
+                        <input type="text" id="reportLocation" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reportContent">개선이 필요한 내용</label>
+                        <textarea id="reportContent" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">제보하기</button>
+                </form>
+                <div id="reportMessage" class="message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- School Detail Modal -->
+    <div id="schoolModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="schoolDetail"></div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="footer-title">학교 접근성</h3>
-                    <p class="footer-description">모든 학생이 안전하고 편리하게<br>이용할 수 있는 학교를 만듭니다</p>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-heading">바로가기</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">홈</a></li>
-                        <li><a href="#schools">학교 검색</a></li>
-                        <li><a href="#report">제보 현황</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-heading">정보</h4>
-                    <ul class="footer-links">
-                        <li><a href="#about">소개</a></li>
-                        <li><a href="#privacy">개인정보처리방침</a></li>
-                        <li><a href="#terms">이용약관</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 학교 접근성. All rights reserved.</p>
-            </div>
+        <div class="container">
+            <p>&copy; 2024 학교 접근성 정보. 모든 학생의 평등한 교육을 위하여.</p>
         </div>
     </footer>
-
-    <!-- School Detail Modal -->
-    <div id="school-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modal-school-name"></h2>
-                <button class="modal-close" onclick="closeModal()">&times;</button>
-            </div>
-            <div class="modal-body" id="modal-body">
-                <!-- School details will be loaded here -->
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
